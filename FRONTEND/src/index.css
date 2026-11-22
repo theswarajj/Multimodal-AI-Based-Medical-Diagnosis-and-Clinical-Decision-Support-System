@@ -1,0 +1,88 @@
+@import "@fontsource/bricolage-grotesque/500.css";
+@import "@fontsource/bricolage-grotesque/600.css";
+@import "@fontsource/bricolage-grotesque/700.css";
+@import "@fontsource/public-sans/400.css";
+@import "@fontsource/public-sans/500.css";
+@import "@fontsource/public-sans/600.css";
+@import "@fontsource/public-sans/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-porcelain: #FFFFFF;
+  --color-snow: #F6F6F7;
+  --color-hairline: #E6E6E9;
+  --color-graphite: #25272D;
+  --color-cardinal: #C8102E;
+  --color-cardinal-hover: #A90D26;
+  --color-blush: #FCEBED;
+  --color-status-amber: #B7791F;
+  --color-status-teal: #1F7A5C;
+  --color-status-slate: #6B7280;
+
+  --radius-input: 6px;
+  --radius-panel: 12px;
+  --radius-pill: 9999px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-snow);
+  color: var(--color-graphite);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Tabular numerals for medical data, vitals and tables */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus styles matching design system */
+*:focus-visible {
+  outline: 2px solid var(--color-cardinal);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D3D8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B2B6BC;
+}

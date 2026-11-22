@@ -1,0 +1,5 @@
+# Single image
+python running.py --image path/to/some_lesion.jpg --model checkpoints/efficientnet_b3_ham10000_v2_best.pth
+
+# Whole folder
+python running.py --image_dir path/to/test_images --model checkpoints/efficientnet_b3_ham10000_v2_best.pth

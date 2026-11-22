@@ -1,0 +1,54 @@
+{
+  "report_type": "Skin Lesion Classification",
+  "generated_at": "2026-10-11T09:44:25.718985",
+  "model": {
+    "architecture": "EfficientNet-B3",
+    "dataset": "HAM10000",
+    "checkpoint": "C:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAND\\deeplearing\\skin\\checkpoints/efficientnet_b3_ham10000_v2_best.pth",
+    "num_classes": 7,
+    "classes": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "tta_enabled": true,
+    "confidence_threshold": 0.5,
+    "device": "cuda"
+  },
+  "results": [
+    {
+      "patient_id": "ISIC_0024319",
+      "file": "C:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAND\\deeplearing\\skin\\INPUT\\ISIC_0024319.jpg",
+      "prediction": "nv",
+      "full_name": "Melanocytic Nevi (Mole)",
+      "confidence": 0.8613,
+      "malignant": false,
+      "risk_level": "BENIGN",
+      "urgency": "LOW",
+      "malignant_probability": 0.1201171875,
+      "benign_probability": 0.8798828125,
+      "all_class_scores": {
+        "nv": 0.8613,
+        "mel": 0.1037,
+        "vasc": 0.0113,
+        "akiec": 0.0082,
+        "bcc": 0.0082,
+        "bkl": 0.0041,
+        "df": 0.0033
+      },
+      "timestamp": "2026-10-11T09:44:24.011750"
+    }
+  ],
+  "summary": {
+    "total_images": 1,
+    "malignant": 0,
+    "benign": 1,
+    "uncertain": 0,
+    "avg_confidence": 0.8613
+  },
+  "disclaimer": "This is an AI-assisted screening tool trained on the HAM10000 dataset. All findings are probabilistic and must be confirmed by a qualified dermatologist. Not a substitute for professional medical diagnosis."
+}

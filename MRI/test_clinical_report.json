@@ -1,0 +1,48 @@
+{
+  "report_type": "BraTS MRI Tumor Classification",
+  "generated_at": "2026-08-26T21:44:40.919804",
+  "model": {
+    "architecture": "3D ResNet-18 (Adapted 4-channel BraTS)",
+    "checkpoint": "c:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAD[1]\\deeplearing\\mri\\checkpoints\\best_model.pth",
+    "training_epoch": 14,
+    "best_val_f1": 0.9794238523001932,
+    "device": "cuda",
+    "num_classes": 2
+  },
+  "classification_task": {
+    "label_column": "has_ET",
+    "clinical_name": "Enhancing Tumor (ET) \u2014 Active Growth",
+    "description": "Identifies actively enhancing tumor tissue \u2014 regions with contrast enhancement indicating active tumor growth and blood-brain barrier breakdown. Key marker for high-grade glioma (WHO Grade IV)."
+  },
+  "preprocessing": {
+    "target_size": 128,
+    "channel_stats_source": "c:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAD[1]\\deeplearing\\mri\\processed_brats"
+  },
+  "results": [
+    {
+      "patient_id": "test",
+      "file": "c:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAD[1]\\deeplearing\\mri\\test.npz",
+      "original_volume_shape": [
+        4,
+        136,
+        171,
+        146
+      ],
+      "prediction": "POSITIVE",
+      "predicted_class": 1,
+      "confidence": 0.999,
+      "probability_negative": 0.0012,
+      "probability_positive": 0.999,
+      "risk_level": "HIGH",
+      "timestamp": "2026-08-26T21:44:40.917692"
+    }
+  ],
+  "summary": {
+    "total_scans": 1,
+    "positive": 1,
+    "negative": 0,
+    "avg_confidence": 0.999,
+    "low_confidence_count": 0
+  },
+  "disclaimer": "This is an AI-assisted screening tool. All findings are probabilistic and must be confirmed by a qualified radiologist or neuro-oncologist."
+}

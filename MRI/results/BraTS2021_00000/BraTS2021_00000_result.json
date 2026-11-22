@@ -1,0 +1,81 @@
+{
+  "patient_id": "BraTS2021_00000",
+  "file": "C:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAND\\deeplearing\\mri\\INPUT\\BraTS2021_00000.npz",
+  "timestamp": "2026-10-11T09:39:45.864416",
+  "classification_task": {
+    "label_column": "has_ET",
+    "clinical_name": "Enhancing Tumor (ET) \u2014 Active Growth",
+    "description": "Identifies actively enhancing tumor tissue \u2014 regions with contrast enhancement indicating active tumor growth and blood-brain barrier breakdown. Key marker for high-grade glioma (WHO Grade IV)."
+  },
+  "prediction": {
+    "label": "POSITIVE",
+    "class": 1,
+    "confidence": 0.999,
+    "risk_level": "HIGH",
+    "prob_negative": 0.0012,
+    "prob_positive": 0.999
+  },
+  "original_volume_shape": [
+    4,
+    136,
+    171,
+    146
+  ],
+  "tumor_location": {
+    "has_tumor": true,
+    "tumor_voxel_count": 57305,
+    "tumor_volume_fraction": 0.0169,
+    "center_of_mass_voxel": {
+      "D": 87,
+      "H": 43,
+      "W": 67
+    },
+    "center_of_mass_relative": {
+      "D": 0.642,
+      "H": 0.252,
+      "W": 0.458
+    },
+    "bounding_box": {
+      "depth": [
+        66,
+        111
+      ],
+      "height": [
+        5,
+        80
+      ],
+      "width": [
+        45,
+        91
+      ]
+    },
+    "bounding_box_size": {
+      "depth_span": 46,
+      "height_span": 76,
+      "width_span": 47
+    },
+    "laterality": "Midline / bilateral",
+    "axial_position": "Central",
+    "anatomical_summary": "Central midline / bilateral",
+    "subtypes": {
+      "NCR/NET": {
+        "name": "Necrotic / Non-Enhancing Core (NCR/NET)",
+        "voxel_count": 11738,
+        "fraction_of_tumor": 0.2048,
+        "fraction_of_volume": 0.003457
+      },
+      "ED": {
+        "name": "Peritumoral Edema (ED)",
+        "voxel_count": 12836,
+        "fraction_of_tumor": 0.224,
+        "fraction_of_volume": 0.00378
+      },
+      "ET": {
+        "name": "Enhancing Tumor (ET)",
+        "voxel_count": 32731,
+        "fraction_of_tumor": 0.5712,
+        "fraction_of_volume": 0.00964
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "report_type": "Skin Lesion Classification",
+  "generated_at": "2026-10-11T00:15:25.435551",
+  "model": {
+    "architecture": "EfficientNet-B3",
+    "dataset": "HAM10000",
+    "checkpoint": "C:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAND\\deeplearing\\skin\\checkpoints/efficientnet_b3_ham10000_v2_best.pth",
+    "num_classes": 7,
+    "classes": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "tta_enabled": true,
+    "confidence_threshold": 0.5,
+    "device": "cuda"
+  },
+  "results": [
+    {
+      "patient_id": "ISIC_0024306",
+      "file": "C:\\Users\\swrjk\\OneDrive\\Desktop\\DEVANAND\\deeplearing\\skin\\INPUT\\ISIC_0024306.jpg",
+      "prediction": "nv",
+      "full_name": "Melanocytic Nevi (Mole)",
+      "confidence": 0.979,
+      "malignant": false,
+      "risk_level": "BENIGN",
+      "urgency": "LOW",
+      "malignant_probability": 

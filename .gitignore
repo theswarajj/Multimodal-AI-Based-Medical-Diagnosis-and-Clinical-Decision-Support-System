@@ -1,0 +1,94 @@
+# ============================================================
+#  ClinicalLens — .gitignore
+#  Keeps the GitHub repo clean: hides datasets, model weights,
+#  database, user uploads, caches, and secrets.
+# ============================================================
+
+# ───── Python ─────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+.eggs/
+
+# ───── Virtual environments ─────
+venv/
+.venv/
+env/
+ENV/
+
+# ───── IDE / Editor ─────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ───── Node / Frontend build ─────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ───── Trained Model Checkpoints (large .pth / .pt files) ─────
+# These are too large for GitHub. Download or retrain locally.
+SKIN/checkpoints/
+XRAY/checkpoints/
+MRI/checkpoints/
+MRI/resnet18_3d_brats_adapted.pth
+MRI/resnet18_3d_pretrained.pth
+
+# ───── Preprocessed Datasets (very large) ─────
+# Not pushed to GitHub. Run the preprocessing scripts locally.
+SKIN/processed/
+XRAY/processed_chexpert/
+MRI/processed_brats/
+
+# ───── Raw Dataset Inputs (download from source) ─────
+SKIN/INPUT/
+XRAY/INPUT/
+MRI/INPUT/
+
+# ───── Patient Uploads & Clinical Database ─────
+# Contains real patient data — NEVER push to GitHub.
+UPLOADS/
+clinical_lens.db
+clinical_lens.db-shm
+clinical_lens.db-wal
+
+# ───── Runtime Outputs (generated per-case) ─────
+OUTPUT/SKIN/
+OUTPUT/XRAY/
+OUTPUT/MRI/
+OUTPUT/REPORTS/
+
+# ───── Inference Input Images (user-provided scans) ─────
+INPUT/SKIN/
+INPUT/XRAY/
+INPUT/MRI/
+INPUT/TEXT/
+
+# ───── Test & Scratch Files ─────
+scratch_*.py
+tests/__pycache__/
+
+# ───── Environment & Secrets ─────
+.env
+.env.local
+.env.production
+*.key
+*.pem
+
+# ───── Logs ─────
+*.log
+logs/
